@@ -16,3 +16,6 @@ var Resolver = module.exports = new Class({
     return path.join(this.stack[parsed.host].dest, parsed.path);
   }
 });
+
+
+
