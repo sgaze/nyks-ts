@@ -1,5 +1,5 @@
-import  url   = require('url') ;
-import  path   = require('path');
+var  url   = require('url') ;
+var  path   = require('path');
 
 
 

@@ -2,6 +2,7 @@
 .idea
 .tscache
 **/*.js
+tscCompilar
 /.npmignore
 npm-debug.log
 
