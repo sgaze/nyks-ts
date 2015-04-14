@@ -1,14 +1,13 @@
 {
-  "name": "nyks",
+  "name": "nyks-ts",
   "version": "0.7.8",
   "description": "nodejs exupery style",
   "keywords": [
-    "mootools",
     "native",
     "api"
   ],
-  "homepage": "http://github.com/131/nyks",
-  "main": "./index.js",
+  "homepage": "http://github.com/131/nyks-ts",
+  "main": "./nyks.js",
   "author": {
     "name": "François Leurent",
     "email": "131.js@cloudyks.org",
@@ -16,12 +15,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:131/nyks.git"
+    "url": "git@github.com:131/nyks-ts.git"
   },
-  "readme": "# nyks toolkit\r\n\r\nExtend nodejs & javascript native API of missing functions.\r\n",
+  "readme": "# nyks-ts toolkit\r\n\r\nExtend nodejs & javascript native API of missing functions.\r\n",
   "readmeFilename": "README.md",
   "bugs": {
-    "url": "https://github.com/131/nyks/issues"
+    "url": "https://github.com/131/nyks-ts/issues"
   },
   "devDependencies": {
     "grunt": "~0.4.5",

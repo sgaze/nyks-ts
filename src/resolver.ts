@@ -1,13 +1,21 @@
-var  url   = require('url'),
-     path   = require('path');
+import  url   = require('url') ;
+import  path   = require('path');
 
-var Resolver = module.exports = new Class({
-  stack : {},
-  register:function(prefix, dest){
+
+
+class Resolver {
+  stack = {} ;
+
+  constructor(){
+
+  }
+
+  register(prefix, dest){
     this.stack[prefix] = { dest: dest };
-  },
+  }
 
-  resolve:function(raw){
+  resolve(raw : string)  : string
+  {
     if(!raw.startsWith("path://"))
       return raw;
     var parsed = url.parse(raw);
@@ -15,7 +23,6 @@ var Resolver = module.exports = new Class({
       throw "Unregistered path : path://" + parsed.host;
     return path.join(this.stack[parsed.host].dest, parsed.path);
   }
-});
-
+}
 
 

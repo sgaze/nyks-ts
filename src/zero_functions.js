@@ -8,4 +8,14 @@
         });
         return uuid;
     };
+    this.ApplyBind = function (obj) {
+        for (var i = 0; i < obj.Binds.length; i++) {
+            if (obj[obj.Binds[i]] === undefined) {
+                require('../logger').warn(obj.Binds[i], ' does not appear to be a methode of the class');
+            }
+            else {
+                obj[obj.Binds[i]] = obj[obj.Binds[i]].bind(obj);
+            }
+        }
+    };
 })();
