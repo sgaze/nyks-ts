@@ -12,8 +12,6 @@ interface StringConstructor {
     uniqueID() : string ;
 }
 
-
-
 String.uniqueID = function(){
     var UID = Date.now();
     return (UID++).toString(36);
