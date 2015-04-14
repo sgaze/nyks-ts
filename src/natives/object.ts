@@ -2,7 +2,6 @@ interface ObjectConstructor{
     erase(object : Object , key) ;
     merge(object1 :Object , object2:Object) : any;
     each(object : Object, fn, bind?) ;
-    keys(object : Object) ;
     getLength(object : Object) : number ;
     filter(object, fn, bind?)
 }
@@ -45,13 +44,4 @@ Object.merge = function(obj1,obj2){
         }
     }
     return obj3;
-}
-
-
-Object.keys = function(object){
-    var keys = [];
-    for (var key in object){
-        if (Object.prototype.hasOwnProperty.call(object, key)) keys.push(key);
-    }
-    return keys;
 }
