@@ -1,7 +1,13 @@
 var cp = require('child_process');
 
+declare module 'child_process'{
+  export function exec_window(cmd, args?, callback?, error?) ;
+   export function passthru(cmd, options?, chain?) ;
+}
+
+
   //child_process.exec only wait for console, this use process spawn
-cp.exec_window = function(cmd, args, callback, error){
+cp.exec_window = function(cmd, args?, callback?, error?){
   var ps = cp.spawn(cmd, args);
   ps.on('close', callback);
   ps.on('error', error || function(){} );
@@ -9,7 +15,7 @@ cp.exec_window = function(cmd, args, callback, error){
 
 
   //callback(err, exit, lastline);
-cp.passthru = function(cmd, options, chain){
+cp.passthru = function(cmd, options?, chain?){
     if(Array.isArray(options))
       options = { args : options} ;
     options = options || {};

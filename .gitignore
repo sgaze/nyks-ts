@@ -1,4 +1,8 @@
 /node_modules
+.idea
+.tscache
+**/*.js
+tscCompilar
 /.npmignore
 npm-debug.log
 

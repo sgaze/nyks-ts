@@ -1,4 +1,10 @@
 var fs = require('fs');
+
+declare module 'path'{
+  export function extend_PATH(npath) ;
+  export function which(bin) ;
+}
+
 var path = require('path');
 
 path.extend_PATH = function(npath){
