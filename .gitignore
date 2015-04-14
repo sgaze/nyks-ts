@@ -5,4 +5,4 @@
 tscCompilar
 /.npmignore
 npm-debug.log
-
+**/*.d.ts
