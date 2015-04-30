@@ -39,7 +39,6 @@ Object.merge = function(obj1,obj2){
     for (var attrname in obj2) { obj3[attrname] = obj2[attrname]; }
     for (var attrname in obj1) {
         if (obj2.hasOwnProperty(attrname) && typeof(obj2[attrname]) === 'object' && typeof(obj1[attrname]) === 'object' ) {
-            console.log(attrname);
             obj3[attrname] = Object.merge(obj1[attrname] , obj2[attrname]) ;
         }
     }
