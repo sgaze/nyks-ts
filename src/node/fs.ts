@@ -1,10 +1,9 @@
 
 
 var fs = require('fs'),
-  crypto = require('crypto'),
+  nCrypto = require('crypto'),
   path = require('path'),
   os = require('os');
-
 
 declare module 'fs' {
     export function mkdirpSync(file_path : string) : string ;
@@ -20,7 +19,7 @@ declare module 'fs' {
 }
 
 fs.md5FileSync = function(file_path){
-  var md5 = crypto.createHash('md5');
+  var md5 = nCrypto.createHash('md5');
   md5.update(fs.readFileSync(file_path));
   return md5.digest('hex');
 }
@@ -36,7 +35,7 @@ fs.isDirectorySync = function(file_path){
 
 
 fs.md5File = function (file_path, callback){
-    var shasum = crypto.createHash('md5');
+    var shasum = nCrypto.createHash('md5');
     var s = fs.ReadStream(file_path);
     s.on('data', shasum.update.bind(shasum));
     s.on('end', function() {

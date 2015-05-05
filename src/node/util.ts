@@ -1,5 +1,5 @@
 var util   = require('util'),
-    crypto = require('crypto');
+    nCrypto = require('crypto');
 
 declare module 'util'{
   export function md5(str) ;
@@ -7,7 +7,7 @@ declare module 'util'{
 }
 
 util.md5 = function(str){
-  return crypto.createHash('md5').update(str).digest('hex');
+  return nCrypto.createHash('md5').update(str).digest('hex');
 }
 
 /*util.parseargs = function(argv){
